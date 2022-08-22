@@ -38,18 +38,18 @@ import java.util.Locale;
 public class ValidPalindrome {
     public static void main(String[] args) {
         Solution solution = new ValidPalindrome().new Solution();
-    
+        System.out.println(solution.isPalindrome("A man, a plan, a canal: Panama"));
     }
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public boolean isPalindrome(String s) {
         boolean res = false;
-
+        //去除掉字符串中的非数字和字母
         String filteredS = removeNonNumberAndChar(s);
-
-        String reversedS = reverseString(s);
-
-        res = reversedS.equals(s);
+        //翻转字符串
+        String reversedS = reverseString(filteredS);
+        //忽略大小写进行比较
+        res = reversedS.equalsIgnoreCase(filteredS);
 
         return res;
     }
