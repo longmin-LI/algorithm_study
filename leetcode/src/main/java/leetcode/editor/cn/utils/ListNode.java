@@ -6,9 +6,9 @@ package leetcode.editor.cn.utils;
  */
 public class ListNode {
     int val;
-    ListNode next;
+    public ListNode next;
 
-    ListNode() {
+    public ListNode() {
     }
 
     ListNode(int val) {
